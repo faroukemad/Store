@@ -1,0 +1,103 @@
+@import "@fontsource/league-spartan";
+@import '../global/global.scss';
+
+
+.intro {
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    // @include mob {
+    //     height: auto;
+    // }
+
+    .intro-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 46rem;
+        flex-direction: column;
+        overflow: hidden;
+        padding-top: 50px;
+        @include mob{
+           padding-top: 50px;
+            
+        }
+    }
+
+    .intro-h1 {
+        font-size: 80px;
+        font-weight: bold;
+
+        color: black !important;
+        text-align: center;
+        @include mob{
+            font-size: 40px;
+            
+        }
+    }
+
+    .intro-p {
+        color: black;
+
+        margin-top: 40px;
+        font-size: 25px;
+        line-height: 1.2;
+        text-align: center;@include mob{
+            font-size: 20px;max-width: 38rem;padding: 1rem;
+        }
+    }
+
+    .intro-button {
+        color: black;
+        border-radius: 20px;
+        background-color: lightgray;
+        // border: 2px solid ;
+        padding: .925rem 1rem .9rem;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 60px;
+        text-decoration: none;
+        transition: all .5s ease-out;
+        &:hover{
+            background-color: #0C3795;
+            color: white;
+        }
+    }
+    .intro-checks{
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .intro-live{
+        color: black;
+        margin-right: 10px;
+    }
+    .intro-check{
+        width: 15px;
+        height: 15px; overflow: hidden;
+        margin: 0 5px;
+    }
+    .intro-check img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        overflow: hidden;
+    }
+    .intro-absolute{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(-50%,-50%);
+        height: 40vw;
+        width: 55vw;
+        
+    }
+    .intro-absolute img{
+        width: 100%;
+        height: 100%;
+    }
+}

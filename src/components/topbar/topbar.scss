@@ -1,0 +1,201 @@
+@import '../global/global.scss';
+
+.topbar {
+
+  width: 100%;
+  height: 100px;
+  color: white;
+  transition: all 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+background-color: #f7f2f2;
+  @include mob {
+    height: 100px;
+    // overflow: hidden;
+
+
+  }
+
+  
+
+  .topbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .topbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .topbar-right {
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include ipad{
+      width: 50%;
+    }
+    @include mob {
+      display: none;
+    }
+  }
+
+  .topbar-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .topbar-login {
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none !important;
+
+    @include mob {
+      display: none;
+    }
+  }
+
+  .topbar-Blog,
+  .topbar-Pricing,
+  .topbar-get,
+  .topbar-viewplans {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+
+  .element::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    bottom: -5px;
+    left: 0;
+    background-color: #0C3795;
+    margin-top: 10px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .element:hover::before {
+    transform: scaleX(1);
+  }
+
+  .topbar-viewplans {
+    // border: 2px solid lightgray;
+    background-color: #0C3795;
+    padding: .7rem;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 1s ease-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+
+  }
+
+  .btn:hover,
+  .btn2:hover {
+    color: #fff;
+  }
+
+  .btnn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: lightgray;
+    z-index: -1;
+    transition: 0.8s;
+  }
+
+  .btnn::before,
+  .btnn3::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+
+
+  .btnn:hover::before,
+  .btnn2:hover::before {
+    height: 180%;
+  }
+.topbar-right2{
+  display: none;
+  @include mob{
+    display: block;
+  }
+}
+  .topbar-menu {
+    color: black;
+    font-size: 20px;
+    padding: .75rem;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 20px;
+    display: none;
+
+    @include mob {
+      display: block;
+    }
+  }
+
+  .topbar-list-menu {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    height: 90vh;
+    width: 100vw;
+    background-color: #f7f2f2;
+    z-index: 9999;
+    padding: 1.5rem;
+  }
+
+  .topbar-support,
+  .topbar-buynow {
+    color: #000;
+    font-size: 25px;
+    text-decoration: none;
+  }
+
+  .topbar-buynow {
+    margin-top: 30px;
+  }
+
+  .topbar-twitter {
+    margin-top: 30px;
+    fill: black;
+    width: 30px;
+    height: 30px;
+  }
+
+  .topbar-a {
+    text-decoration: none;
+
+  }
+}
+.topbar-fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  
+}

@@ -1,0 +1,122 @@
+@import '../global/global.scss';
+
+.document {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
+
+.document-wrapper {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    max-width: 1320px !important;
+}
+.document-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    @include mob{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.document-grid1{
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 50px 120px 0 rgba(4, 73, 89, 0.08);
+    padding: 40px 35px 50px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.document-login{
+    font-weight: bold;
+    font-size: 25px;color: #000;
+}
+.document-18{
+    background: rgba(175, 184, 193, 0.2);
+    color: #6a737c;
+    font-size: 11px;
+    padding: 3px 8px 0;
+    border-radius: 3px;
+    margin-right: 5px;
+    display: inline-block;
+    line-height: 1.45;
+    vertical-align: middle;
+    font-weight: 500;
+    height: 20px;
+    letter-spacing: 0.2px;
+    margin-top: 5px;
+
+}
+.document-document-new{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.document-document{
+    width: 20px;
+    height: 20px;
+    fill: #6a737c;
+    stroke: #6a737c;
+    margin-right: 10px;
+}
+.document-new{
+    color: #6a737c;
+    font-size: 18px;
+}
+.document-view{
+    margin-top: 30px;
+    border: 1px solid rgba(8, 102, 255, 0.2);
+    background: rgba(8, 102, 255, 0.05);
+    border-radius: 4px;
+    color: #0866ff;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgba(76, 76, 241, 0.05);
+    display: inline-block;
+    padding: 10px 34px;
+    transition: all 0.3s linear, color 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 10px 20px 0 rgba(8, 102, 25, 0.2);
+    background-color: #0866ff !important;
+    border-color: #0866ff;
+    color: #fff;
+    text-decoration: none;
+    }
+}
+.document-everything {
+    color: #000;
+    margin-top: 170px;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 60rem;
+    line-height: 1.1;
+    display: flex;
+    align-self: center;
+    @include mob{
+        font-size: 40px;
+    }
+}
+.document-a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.document-downloadnow {
+    color: #000;
+    background-color: #F9AA39;
+    padding: 1rem;
+    border-radius: 50px;
+    border: 2px solid #000;
+    margin-top: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+}

@@ -1,0 +1,179 @@
+@import '../global/global.scss';
+
+.Menu{
+    height:1300px;
+    background-color:#1c1d25;
+    @include mob2{
+        height: auto;
+    }
+    .wrapper{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: column;
+
+        .text{
+            height: 200px;
+                  margin-bottom: 50px;
+                  margin-top: 70px;
+                  color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+                  h1{
+                      color: white;
+                      font-weight: bold;
+              font-size: 60px;
+              padding: 10px;
+              @include mob{
+                font-size: 40px;
+              }
+              span{
+                  margin-right: 10px;
+                color:burlywood;
+                @include mob{
+                  font-size: 40px;
+                  padding:0 5px;
+                }
+              }
+            }}
+        .products1{
+            overflow:hidden;
+            margin-bottom: 120px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        
+            @include mob2{
+            flex-direction: column;
+            margin-bottom: 30px;
+                    }
+        }
+        .menu1 {
+            margin-right: 50px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction: column;
+            background-color: #3c3d44;
+            padding: 30px;
+            border-radius: 20px;
+            @include mob2{
+                margin-bottom: 20px;
+                padding: 15px;
+                margin-right: 0px;
+            }
+        }
+        .menu2{
+            margin-right: 50px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction: column;
+            background-color: #3c3d44;
+            padding: 30px;
+            border-radius: 20px;
+            @include mob2{
+                margin-bottom: 20px;
+                padding: 15px;
+                margin-right: 0px;
+            }
+        }
+        .menu3{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction: column;
+            background-color: #3c3d44;
+            padding: 30px;
+            border-radius: 20px;
+            @include mob2{
+                margin-bottom: 20px;
+                padding: 15px;
+                margin-right: 0px;
+            }
+        }
+
+          
+        .imgCont{
+            width: 150px;
+            height: 150px;
+            overflow:hidden;
+            margin-bottom: 20px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            @include mob2{
+                width: 100px;
+                height: 100px;
+            }
+            img{
+                width: 100%;
+                width: 100%;
+                object-fit: contain;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+        }
+        h2{
+            font-size: 25px;
+            margin-bottom: 20px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:burlywood;
+            @include mob2{
+                padding:0 1px;
+            }
+        }
+        p{
+            margin-bottom: 20px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            font-stretch: expanded;
+            text-align:justify;
+            color:white;
+        }
+        .read{
+            border:3px solid burlywood;
+            padding: 25px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color:white;
+            border-radius: 15px;
+            font-weight: bold;
+            transition: all .7s ease-in-out;
+            @include mob2{
+               
+                padding: 10px;
+            }
+            
+&:hover{
+    transform: scale(1.2);
+    color:black;
+}
+
+
+            a{
+                text-decoration:none;
+            }
+        }
+    }
+
+    .products2{
+        overflow:hidden;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        @include mob2{
+            flex-direction: column;
+                    }
+    }
+}

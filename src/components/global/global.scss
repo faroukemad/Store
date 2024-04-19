@@ -1,0 +1,46 @@
+$width: 900px;
+$width2: 1244px;
+$width3: 663px;
+$width4: 1200px;
+$width5: 901px;
+$width6: 1200px;
+
+@mixin range {
+  @media (min-width: $width3) and (max-width: $width2) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (min-width: #{$width}) and (max-width: #{$width4}) {
+    @content;
+  }
+}
+
+;
+
+@mixin rangex {
+  @media (min-width: $width5) and (max-width: $width6) {
+    @content;
+  }
+}
+
+@mixin mob {
+  @media (max-width: #{$width}) {
+
+    @content
+  }
+
+
+
+}
+
+@mixin mob2 {
+  @media (max-width: #{$width4}) {
+
+    @content
+  }
+
+
+
+}

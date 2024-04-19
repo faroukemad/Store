@@ -1,5 +1,64 @@
+
+
 .App {
-  text-align: center;
+width: 100%;
+display: flex;
+position: relative;
+justify-content: center;
+transition: all 1s ease;
+background-color: #f7f2f2;
+
+
+}
+.appSize{
+  height: 700px;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+.cofload{
+  overflow:hidden;
+  z-index: 200;
+ 
+}
+.coffeeCont{
+margin-top: 130px;
+  width: 400px;
+  height: 400px;
+overflow: hidden;
+
+
+}
+@media (max-width: 662px) {
+  .coffeeCont{
+  width: 300px;
+  height: 300px;
+}}
+.loader{
+  
+  top: 200px;
+  left:500px;
+}
+.back{
+  /*background-image:url('../public/assests/sharkBack.jpg');
+  background-size:1500px 690px;*/
+  background-color: #f7f2f2 ;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;  
+  transition: all 3s ease-in-out;
+  transition-delay: 1.5s;
+  transition-duration: 1.5s;
+
+  }
+
+.sections{
+        width: 100%;
+        position: relative;
+        transition: all 1s ease;
 }
 
 .App-logo {
@@ -35,4 +94,60 @@
   to {
     transform: rotate(360deg);
   }
+}
+.background{
+  background-image:url('../public/assests/back6.jpg');
+  background-size:1500px 690px;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+  transition: all 3s ease-in-out;
+  transition-delay: 1.5s;
+  transition-duration: 1.5s;
+  }
+
+ 
+  
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 9px;
+  background: #6f4e37;
+  transform-origin: 0%;
+  z-index:500;
+}
+
+.blurr{
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
