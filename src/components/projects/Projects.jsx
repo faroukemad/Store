@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Slider from './Slider';
+import React from "react";
+
 import './projects.scss'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";

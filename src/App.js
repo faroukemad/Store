@@ -2,15 +2,12 @@ import './App.css';
 import Topbar from "./components/topbar/Topbar";
 import Intro from "./components/intro/Intro";
 import Projects from './components/projects/Projects';
-import Email from './components/email/Email';
 import { useState, useEffect } from "react";
-import About from './components/about/About';
 import Footer from './components/footer/Footer';
 import { motion, useScroll, useSpring } from "framer-motion";
 import Lottie from 'react-lottie';
-import coffeeloader from './coffeeloaderx.json'
+import word from './word.json'
 import Up from './components/up/Up';
-import Menu from './components/menu/Menu';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Plans from './components/plans/plans'
 import Blog from './components/blog/blog';
@@ -24,13 +21,12 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [backOpen, setBackOpen] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [load, setLoad] = useState(false)
 
 
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: coffeeloader,
+    animationData: word,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
@@ -57,7 +53,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 0)
+    }, 5000)
   }, [])
 
 

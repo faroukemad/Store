@@ -1,8 +1,5 @@
-import React, { useRef } from "react";
+import React from "react";
 import './intro.scss'
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-import Lottie from 'react-lottie';
-import scroll from '../../scroll.json'
 import { Link } from "react-router-dom";
 
 export default function Intro({ menuOpen, setMenuOpen, backOpen, setBackOpen }) {

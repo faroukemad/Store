@@ -1,8 +1,5 @@
-import React, { useRef, useState } from 'react'
+import React, {  useState } from 'react'
 import './topbar.scss'
-import { motion } from 'framer-motion';
-import Lottie from 'react-lottie';
-import coffeeLove from '../../coffee-love.json'
 import { Link } from 'react-router-dom';
 import { FaTwitter } from "react-icons/fa";
 

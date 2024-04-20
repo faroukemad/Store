@@ -71,7 +71,7 @@ export default function Privacy() {
                 <div className="privacy-effective">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</div>
 
                 <div className="privacy-everything">Everything you need for your WordPress login page</div>
-                <a className='privacy-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' >
+                <a className='privacy-a' href="https://wordpress.org/plugins/login-designer/" target='_blank'  rel="noreferrer">
 
                 <div className="privacy-downloadnow">Download Now</div></a>
             </div>

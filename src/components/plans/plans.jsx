@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './plans.scss'
 import Switch from '@mui/material/Switch';
 
@@ -21,7 +21,7 @@ export default function Plans() {
                 <div className="plans-check">Check out our pricing table below and pick the best plan for you.</div>
                 <div className="plans-annual-lifetime">
                     <div className="plans-annual">Annual</div>
-                    <Switch checked={switchState} onChange={handleSwitchChange} defaultChecked/>
+                    <Switch checked={switchState} onChange={handleSwitchChange} defaultChecked />
                     <div className="plans-lifetime">Lifetime</div>
                 </div>
                 <div className="plans-plans">
@@ -41,8 +41,8 @@ export default function Plans() {
                             <li className='plans-li'>  All Core Features Included</li>
                             <li className='plans-li'>  Auto-Renew Subscription</li>
                         </ul>
-                        <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' >
-                        <div className="plans-buynow">Buy Now</div></a>
+                        <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' rel="noreferrer" >
+                            <div className="plans-buynow">Buy Now</div></a>
                     </div>
                     <div className="plans-plan1">
                         <div className="plans-basic">Pro</div>
@@ -60,8 +60,8 @@ export default function Plans() {
                             <li className='plans-li'>  All Core Features Included</li>
                             <li className='plans-li'>  Auto-Renew Subscription</li>
                         </ul>
-                        <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' >
-                        <div className="plans-buynow">Buy Now</div></a>
+                        <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' rel="noreferrer">
+                            <div className="plans-buynow">Buy Now</div></a>
                     </div>
                     <div className="plans-plan1">
                         <div className="plans-basic">Agency</div>
@@ -79,8 +79,8 @@ export default function Plans() {
                             <li className='plans-li'>  All Core Features Included</li>
                             <li className='plans-li'>  Auto-Renew Subscription</li>
                         </ul>
-                        <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' >
-                        <div className="plans-buynow">Buy Now</div></a>
+                        <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' rel="noreferrer">
+                            <div className="plans-buynow">Buy Now</div></a>
                     </div>
                     <div className="plans-plan1">
                         <div className="plans-basic">Ultimate</div>
@@ -98,8 +98,8 @@ export default function Plans() {
                             <li className='plans-li'>  All Core Features Included</li>
                             <li className='plans-li'>  Auto-Renew Subscription</li>
                         </ul>
-                        <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' >
-                        <div className="plans-buynow">Buy Now</div></a>
+                        <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' rel="noreferrer">
+                            <div className="plans-buynow">Buy Now</div></a>
                     </div>
                 </div>
                 <div className="plans-programs">
@@ -121,8 +121,8 @@ export default function Plans() {
                     </div>
                 </div>
                 <div className="plans-everything">Everything you need for your WordPress login page</div>
-                <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' >
-                <div className="plans-downloadnow">Download Now</div></a>
+                <a className='plans-a' href="https://wordpress.org/plugins/login-designer/" target='_blank' rel="noreferrer" >
+                    <div className="plans-downloadnow">Download Now</div></a>
             </div>
         </div>
     )
