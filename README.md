@@ -49,3 +49,6 @@ To Visit App:
 ![word](https://github.com/faroukemad/wordPress/assets/124167527/ec330be9-4878-4b8c-b1ba-d2ba3bf00434)
 
 ## Live link:
+
+[https://word-press-rouge-eight.vercel.app/](https://word-press-rouge-eight.vercel.app/)
+
