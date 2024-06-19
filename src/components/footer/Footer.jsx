@@ -8,9 +8,9 @@ export default function Footer() {
         <div className='footer' id="footer">
             <div className="footer-wrapper">
 
-                <Link to='/'>
+                {/* <Link to='/'>
                     <div className="footer-logo">
-                        <img src="assests/logo.svg" alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/assests/logo.svg`} alt="" />
                     </div>
                 </Link>
                 <div className="footer-wrapper-right">
@@ -38,12 +38,12 @@ export default function Footer() {
                         <div className="footer-twitter">@logindesigner</div></a>
                     </div>
                 </div>
+            </div> */}
+                <div className="footer-copy">© 2024 Farouk Emad, from Fake Api Store</div>
+                <div className="footer-blue-shape">
+                    <img src={`${process.env.PUBLIC_URL}/assests/blue-shape.svg`} alt="" />
+                </div>
             </div>
-            <div className="footer-copy">© 2024 Login Designer, from WP Experts</div>
-            <div className="footer-blue-shape">
-                <img src="assests/blue-shape.svg" alt="" />
-            </div>
-
         </div>
     )
 }

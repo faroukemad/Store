@@ -2,6 +2,7 @@ import React, {  useState } from 'react'
 import './topbar.scss'
 import { Link } from 'react-router-dom';
 import { FaTwitter } from "react-icons/fa";
+import { TiShoppingCart } from "react-icons/ti";
 
 export default function Topbar({ backOpen, setBackOpen }) {
 
@@ -18,14 +19,14 @@ export default function Topbar({ backOpen, setBackOpen }) {
 
         <div className="topbar-left">
           <Link to='/' className='topbar-link'>
-            <img className='topbar-logo' src="assests/logo.svg" alt="" />
+            <img className='topbar-logo' src={`${process.env.PUBLIC_URL}/assests/logo.svg`} alt="" />
             <div className="topbar-login" to='/'>
-              Login designer
+              Online Store
             </div>
           </Link>
         </div>
         <div className="topbar-right">
-          <Link className="topbar-Blog element" to='/blog'>
+          {/* <Link className="topbar-Blog element" to='/blog'>
             Blog
           </Link>
           <Link className="topbar-Pricing element" to='/plans'>
@@ -35,9 +36,12 @@ export default function Topbar({ backOpen, setBackOpen }) {
           <a href="https://objectsws.atlassian.net/servicedesk/customer/portal/19" target='_blank' rel="noreferrer" className="topbar-get element">Get Support</a>
 
           <Link className="topbar-viewplans btnn" to='/plans'>
-            View Plans</Link>
+            View Plans</Link> */}
+            {/* <Link className="topbar-Blog element" to='/cart'>
+            <TiShoppingCart className='topbar-cart'/>
+          </Link> */}
         </div>
-        <div className="topbar-right2">
+        {/* <div className="topbar-right2">
           <button className="topbar-menu" onClick={toggleMenu}>  {menuOpen ? "Close" : "Menu"}</button>
         </div>
         {menuOpen && (
@@ -51,7 +55,7 @@ export default function Topbar({ backOpen, setBackOpen }) {
               <FaTwitter className="topbar-twitter" />
             </a>
           </div>
-        )}
+        )} */}
       </div>
 
     </div>

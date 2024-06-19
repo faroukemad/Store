@@ -4,7 +4,7 @@
 
 .intro {
 
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,13 +18,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 46rem;
+        max-width: 90%;
         flex-direction: column;
         overflow: hidden;
-        padding-top: 50px;
-        @include mob{
-           padding-top: 50px;
-            
+        padding-top: 80px;
+
+        @include mob {
+            padding-top: 100px;
+
         }
     }
 
@@ -34,21 +35,48 @@
 
         color: black !important;
         text-align: center;
-        @include mob{
+
+        @include mob {
             font-size: 40px;
-            
+
         }
     }
 
     .intro-p {
         color: black;
 
-        margin-top: 40px;
-        font-size: 25px;
-        line-height: 1.2;
-        text-align: center;@include mob{
-            font-size: 20px;max-width: 38rem;padding: 1rem;
+
+        font-size: 35px;
+
+        text-align: center;
+
+        @include mob {
+            font-size: 20px;
+            max-width: 38rem;
+
         }
+    }
+
+    // .p-dropdown-label{
+    //     color: black !important;
+    // }
+    // .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight{
+    //     color: #495057 !important;
+    // }
+    .intro-p-sort {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid #0C3795;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+
+    .intro-sort {
+        display: flex;
+        gap: 15px;
     }
 
     .intro-button {
@@ -62,42 +90,139 @@
         margin-top: 60px;
         text-decoration: none;
         transition: all .5s ease-out;
-        &:hover{
+
+        &:hover {
             background-color: #0C3795;
             color: white;
         }
     }
-    .intro-checks{
+
+    .intro-checks {
         display: flex;
         align-items: center;
         margin-top: 60px;
     }
-    .intro-live{
+
+    .intro-live {
         color: black;
         margin-right: 10px;
     }
-    .intro-check{
+
+    .intro-check {
         width: 15px;
-        height: 15px; overflow: hidden;
+        height: 15px;
+        overflow: hidden;
         margin: 0 5px;
     }
+
     .intro-check img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         overflow: hidden;
     }
-    .intro-absolute{
+
+    .intro-absolute {
         position: absolute;
         top: 50%;
         right: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         height: 40vw;
         width: 55vw;
-        
+
     }
-    .intro-absolute img{
+
+    .intro-absolute img {
         width: 100%;
         height: 100%;
     }
+
+    .intro-sofas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .intro-sofa {
+        width: 300px;
+
+        @include mob {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .intro-sofa-img {
+        width: 100%;
+        height: 200px;
+
+    }
+
+    .intro-sofa-title {
+        margin-top: 10px;
+        color: black;
+    }
+
+    .intro-sofa-price {
+        margin-top: 10px;
+        color: #8b3b35;
+    }
+
+}
+
+.cart,
+.product-details {
+    margin-top: 100px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-details-img {
+    width: 500px;
+    height: 400px;
+
+    @include mob {
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+.product-details-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    @include mob {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.product-details-category {
+    font: normal normal normal 25px/30px;
+    letter-spacing: 7.5px;
+    color: #B4804D;
+    text-transform: uppercase;
+}
+
+.product-details-title {
+    margin-top: 30px;
+    line-height: 1.2;
+}
+
+.product-details-des {
+    margin-top: 30px;
+    line-height: 1.2;
+    font-size: 20px;
+}
+
+.product-details-price {
+    margin-top: 30px;
+}
+
+.product-underline {
+    text-decoration: none;
 }

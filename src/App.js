@@ -1,7 +1,6 @@
 import './App.css';
 import Topbar from "./components/topbar/Topbar";
 import Intro from "./components/intro/Intro";
-import Projects from './components/projects/Projects';
 import { useState, useEffect } from "react";
 import Footer from './components/footer/Footer';
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -9,11 +8,11 @@ import Lottie from 'react-lottie';
 import word from './word.json'
 import Up from './components/up/Up';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Plans from './components/plans/plans'
-import Blog from './components/blog/blog';
-import Terms from './components/terms/terms';
-import Privacy from './components/privacy/privacy';
-import Document from './components/document/document';
+
+import ProductDetails from './components/intro/productDetails';
+// import Cart from './components/intro/cart';
+// import { CartProvider } from './components/cartContext';
+
 
 function App() {
 
@@ -53,11 +52,12 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 5000)
+    }, 0)
   }, [])
 
 
   return (
+    // <CartProvider>
     <Router>
       <div className={"App "} >
         <div className={"App " + (loading && 'appSize')} >
@@ -81,16 +81,13 @@ function App() {
                   <Route path='/' element={
                     <>
                       <Intro />
-                      <Projects />
+                      {/* <Projects /> */}
                     </>} />                
                     {/* <Intro menuOpen={menuOpen} setMenuOpen={setMenuOpen} backOpen={backOpen} setBackOpen={setBackOpen} />
                   <Projects /> */}
-                  <Route path='/plans' element={<Plans/>}/>
-                  <Route path='/blog' element={<Blog/>}/>
-                  <Route path='/terms' element={<Terms/>}/>
-                  <Route path='/privacy' element={<Privacy/>}/>
-                  <Route path='/document' element={<Document/>}/>
-
+                
+                  {/* <Route path='/cart' element={<Cart/>}/> */}
+                  <Route path="/product/:id" element={<ProductDetails/>} />
                 </Routes>
                 <Footer />
                 <Up />
@@ -99,6 +96,7 @@ function App() {
         </div>
       </div>
     </Router>
+    // </CartProvider>
   );
 }
 

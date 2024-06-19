@@ -14,10 +14,10 @@
     }
 
     .footer-wrapper {
-        margin-top: 50px;
+        margin-top: 300px;
         display: flex;
 
-        justify-content: space-between;
+        justify-content: center;
         padding: 0 6rem;
 
         @include mob {
@@ -114,7 +114,9 @@
 
     .footer-copy {
         color: black;
-        padding: 6rem;
+       display: flex;
+       align-self: center;
+       text-align: center;
 
         @include mob {
             padding: 2rem;
