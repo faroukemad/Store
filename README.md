@@ -12,9 +12,9 @@ The online store offers a visually appealing and user-friendly interface where v
 
 ## Main Technologies:
 
-React
-Bootstrap
-Sass
+.`React`
+.`Bootstrap`
+.`Sass`
 
 ## Challenges Faced and Features for the Future:
 
