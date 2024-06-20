@@ -1,20 +1,32 @@
-// // src/cartContext.js
-// import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-// const CartContext = createContext();
+const CartContext = createContext();
 
-// export const useCart = () => useContext(CartContext);
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+  const [notification, setNotification] = useState("");
 
-// export const CartProvider = ({ children }) => {
-//   const [cart, setCart] = useState([]);
+  const addToCart = (product) => {
+    const exists = cart.some(item => item.id === product.id);
+    if (exists) {
+      setNotification("Product already exists in the cart.");
+    } else {
+      setCart((prevCart) => [...prevCart, product]);
+      setNotification("Product added to cart.");
+    }
 
-//   const addToCart = (product) => {
-//     setCart((prevCart) => [...prevCart, product]);
-//   };
+    setTimeout(() => {
+      setNotification("");
+    }, 3000); 
+  };
 
-//   return (
-//     <CartContext.Provider value={{ cart, addToCart }}>
-//       {children}
-//     </CartContext.Provider>
-//   );
-// };
+  return (
+    <CartContext.Provider value={{ cart, addToCart, notification }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
+
+export const useCart = () => {
+  return useContext(CartContext);
+};

@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import './intro.scss'
-import { Link } from "react-router-dom";
 import axios from 'axios';
 import { Dropdown } from 'primereact/dropdown';
-import 'primereact/resources/themes/saga-blue/theme.css';  // Choose the theme you prefer
+import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import Product from "./product";
-// import { useCart } from "../cartContext";
+import { useCart } from "../cartContext";
 
-export default function Intro({ menuOpen, setMenuOpen, backOpen, setBackOpen }) {
+export default function Intro() {
 
   const [products, setProducts] = useState([]);
   const [sortOption, setSortOption] = useState('default');
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  // const [cart, addToCart ] = useCart();
+  const { cart, addToCart, notification } = useCart();
 
 
   const sortOptions = [
@@ -60,9 +59,7 @@ export default function Intro({ menuOpen, setMenuOpen, backOpen, setBackOpen }) 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
   };
-  // const addToCart = (product) => {
-  //   setCart([...cart, product]);
-  // };
+
   const filteredProducts = selectedCategory === 'all'
     ? products
     : products.filter(product => product.category === selectedCategory);
@@ -99,16 +96,12 @@ export default function Intro({ menuOpen, setMenuOpen, backOpen, setBackOpen }) 
         </div>
         <div className="intro-sofas">
 
-        {filteredProducts.map(product => (
-          <Product key={product.id} product={product}  />
-        ))}
-      </div>
-      {/* <div className="cart-link">
-      <Link to="/cart">
-            Go to Cart ({cart.length})
-          </Link>
-        </div> */}
+          {filteredProducts.map(product => (
+            <Product key={product.id} product={product} addToCart={() => addToCart(product)} />
+          ))}
         </div>
+        {notification && <div className="notification">{notification}</div>}
       </div>
+    </div>
   )
 }

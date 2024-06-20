@@ -22,7 +22,6 @@ const ProductDetails = () => {
 
     return (
         <div className="product-details">
-            {/* <Link to="/">Back to Home</Link> */}
             <div className="product-details-wrapper">
                 <div className="">
 
